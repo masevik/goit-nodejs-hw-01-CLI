@@ -16,9 +16,9 @@ async function listContacts() {
     const data = await readFile(contactsPath, "utf8");
     const parsedContacts = JSON.parse(data);
     const list = parsedContacts.map((contact) => {
-      return contact.name;
+      return contact;
     });
-    console.log(list);
+    console.table(list);
   } catch (error) {
     console.error(error);
   }
