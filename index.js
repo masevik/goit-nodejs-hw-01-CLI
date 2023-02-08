@@ -1,5 +1,5 @@
 const {
-  listContacts,
+  getListContacts,
   getContactById,
   removeContact,
   addContact,
@@ -10,7 +10,7 @@ const argv = require("yargs").argv;
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      listContacts();
+      getListContacts();
       break;
 
     case "get":

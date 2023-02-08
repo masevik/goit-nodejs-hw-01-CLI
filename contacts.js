@@ -11,7 +11,7 @@ const getContactId = (parsedData) => {
   return String(nextId);
 };
 
-async function listContacts() {
+async function getListContacts() {
   try {
     const data = await readFile(contactsPath, "utf8");
     const parsedContacts = JSON.parse(data);
@@ -74,7 +74,7 @@ async function addContact(name, email, phone) {
 }
 
 module.exports = {
-  listContacts,
+  getListContacts,
   getContactById,
   removeContact,
   addContact,
