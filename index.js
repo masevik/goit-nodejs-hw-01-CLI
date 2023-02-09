@@ -11,6 +11,7 @@ function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       getListContacts();
+
       break;
 
     case "get":
