@@ -66,7 +66,7 @@ async function addContact(name, email, phone) {
       phone,
     });
 
-    writeFile(contactsPath, JSON.stringify(parsedData), "utf8");
+    writeFile(contactsPath, JSON.stringify(parsedData, null, 2), "utf8");
     console.log(`Contact was added`);
   } catch (error) {
     console.error(error);
