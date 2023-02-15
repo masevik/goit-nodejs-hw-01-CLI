@@ -48,7 +48,7 @@ async function removeContact(contactId) {
         return contact;
       }
     });
-    writeFile(contactsPath, JSON.stringify(newContacts), "utf8");
+    writeFile(contactsPath, JSON.stringify(newContacts, null, 2), "utf8");
     console.log(`Contact was removed`);
   } catch (error) {
     console.error(error);
